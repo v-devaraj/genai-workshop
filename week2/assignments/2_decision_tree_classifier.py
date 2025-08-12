@@ -5,12 +5,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 
-
 # Load the Iris dataset
 iris = load_iris()
 X = iris.data
 y = iris.target
-
 
 # Split into training and testing sets (80% train, 20% test)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -18,7 +16,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Create and train the Decision Tree Classifier
 clf = DecisionTreeClassifier(random_state=42)
 clf.fit(X_train, y_train)
-
 
 # Predict on the test set
 y_pred = clf.predict(X_test)

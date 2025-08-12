@@ -23,8 +23,7 @@ print("Missing Values:\n", df.isna().sum())
 for column in df.columns.tolist():
     if df[column].isna().sum() > 0 and df[column].dtype in ['float64', 'int64']:
         df[column].fillna(df[column].mean(), inplace=True)
-
-
+# Count missing values after filling
 print("Missing Values:\n", df.isna().sum())
 
 # Filter rows by a numeric condition (e.g., Age > 30)
@@ -43,7 +42,6 @@ print("Grouped DataFrame (Mean Age):\n", grouped_df)
 
 # Create a histogram for a numeric column
 plt.hist(x=df['Age'].dropna(), bins=20, color='green', edgecolor='black')  # dropna to avoid NaN issues
-
 plt.title("Age Distribution")
 plt.xlabel("Age")
 plt.ylabel("Frequency")

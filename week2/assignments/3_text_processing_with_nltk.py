@@ -4,7 +4,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from collections import Counter
 
-
 # Download necessary NLTK resources (only run once)
 nltk.download('punkt')
 nltk.download('punkt_tab')
